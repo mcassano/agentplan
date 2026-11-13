@@ -1,0 +1,39 @@
+name: Bug report
+description: Something in agentplan does not work as documented
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you ran, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. agentplan run -- ...
+        2. agentplan show
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: agentplan version
+      placeholder: output of `agentplan --version`
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: OS and filesystem
+      placeholder: e.g. macOS 15.3 (APFS), Ubuntu 24.04 (ext4)
+    validations:
+      required: true
+  - type: input
+    id: agent
+    attributes:
+      label: Agent / command being run
+      placeholder: e.g. Claude Code 2.x, Codex CLI, a shell script
